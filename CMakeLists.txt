@@ -3,4 +3,4 @@ project(tool)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(tool main.cpp createService.cpp createService.h)
+add_executable(tool main.cpp service.cpp service.h)

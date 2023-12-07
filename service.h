@@ -4,3 +4,4 @@
 #endif
 
 void createService();
+void deleteService();

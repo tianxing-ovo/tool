@@ -1,7 +1,9 @@
 #include <string>
 #include <iostream>
-#include "createService.h"
-
+#include "service.h"
+/**
+ * 注册服务
+ */
 void createService() {
     std::string serviceName;
     std::string path;
@@ -13,5 +15,18 @@ void createService() {
     std::cout << "enter the exe file path: ";
     std::cin >> path;
     command.append(serviceName).append(" binPath= \"").append(path).append("\"");
+    system(command.c_str());
+}
+
+/**
+ * 删除服务
+ */
+void deleteService() {
+    std::string serviceName;
+    std::string command = "sc delete ";
+    // 例如: nginx
+    std::cout << "enter the service name: ";
+    std::cin >> serviceName;
+    command.append(serviceName);
     system(command.c_str());
 }
