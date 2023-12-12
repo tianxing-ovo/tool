@@ -5,3 +5,4 @@
 
 void createService();
 void deleteService();
+void closePortService();

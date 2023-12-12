@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "service.h"
+
 /**
  * 注册服务
  */
@@ -28,5 +29,23 @@ void deleteService() {
     std::cout << "enter the service name: ";
     std::cin >> serviceName;
     command.append(serviceName);
+    system(command.c_str());
+}
+
+/**
+ * 关闭指定端口服务
+ */
+void closePortService() {
+    std::string port;
+    std::string command = "netstat -ano | findstr ";
+    std::string pid;
+    std::cout << "enter a port: ";
+    std::cin >> port;
+    command.append(port);
+    system(command.c_str());
+    command = "taskkill /F /PID ";
+    std::cout << "enter a pid: ";
+    std::cin >> pid;
+    command.append(pid);
     system(command.c_str());
 }
