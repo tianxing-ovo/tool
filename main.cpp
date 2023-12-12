@@ -4,9 +4,9 @@
 
 
 int main() {
-    std::cout << "11.register exe as a service" << std::endl;
-    std::cout << "12.delete a service" << std::endl;
-    std::cout << "13.close specific port service" << std::endl;
+    std::cout << "11.注册服务" << std::endl;
+    std::cout << "12.删除服务" << std::endl;
+    std::cout << "13.关闭指定端口服务" << std::endl;
     std::cout << "21.nginx reload" << std::endl;
     std::cout << "22.nginx test" << std::endl;
     std::cout << "23.nginx stop" << std::endl;
